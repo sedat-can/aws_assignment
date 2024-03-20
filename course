@@ -1,0 +1,31 @@
+"guess what"
+
+import random
+
+class guess_game:
+	n = 0
+
+	def __init__ (self, counter, n = 0):
+		self.counter = counter
+		self.n = n
+
+	def sed(self):
+		self.n = self.n + 1
+
+		x = int(input("enter a number (0-4) Please: " ))
+		gN = random.randint(0, 4)
+		while self.n < self.counter :
+			if x == gN:
+				print("your guess is true, but it does not save you from your sin, you will burn!!!!!")
+				break
+			else:
+				print("youfailed")
+				return guess_game.sed(self)
+				
+
+		else:
+			print("you fucked")
+
+
+
+v = guess_game(8).sed()
